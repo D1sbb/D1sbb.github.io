@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!--添加目录与ScrollSpy效果 <div id="toc"></div>-->
-
+<link rel="stylesheet" type="text/css" media="screen" href="/assets/toc.css">
 
 
 
@@ -21,7 +21,7 @@ layout: default
 	{% if page.music-id %}
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&auto=1&id={{ page.music-id }}&height=66"></iframe>
 	{% endif %}
-		{{ content }}
+		{{ content | toc_generate }}
 		
 	<div>
 			{% include comment.html %}<!-- Comments -->
@@ -74,13 +74,11 @@ https://cdn.staticfile.net/jquery/3.2.1/jquery.min.js
 	});
 </script>
 
-<link
-		rel="stylesheet"
-		href="/assets/bootstrap-toc.css"
-		media="screen"
-		charset="utf-8"
-/>
-<div id="mocha-fixture">foo</div>
-<script src="/assets/bootstrap-toc.js"></script>
-<script src="/assets/toc-test.js"></script>
+
+<script src="/assets/jquery.tocLight.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.toc.clickHideButton();
+	});
+</script>
 <!--end添加目录与ScrollSpy效果 -->
