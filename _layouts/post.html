@@ -2,16 +2,16 @@
 layout: default
 ---
 <style>
-	.floating-div {
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100px;
-		height: 100px;
-		background-color: #00ffea;
-	}
+.floating-div {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	background-color: #fdfafa;
+}
 </style>
-<div style="display: flex;">
+<div id="toc" style="flex: 1;" class="floating-div"></div><!--添加目录与ScrollSpy效果 -->
 
 <article style="flex: 4;">
 
@@ -30,8 +30,7 @@ layout: default
 	<div>
 			{% include comment.html %}<!-- Comments -->
 	</div>
-</article><div id="toc" style="flex: 1;" class="floating-div"></div><!--添加目录与ScrollSpy效果 -->
-</div>
+</article>
 
 <div class="page-navigation code">
 	{% if page.next.url %}
