@@ -9,7 +9,7 @@ layout: default
 	bottom: 150px;
 	right: 0;
 	width: 200px;
-	height: 800px;
+	height: 550px;
 	background-color: #FFFFFF;
 }
 .floating-ul, .floating-li{/* ul缩进 在toc.js里 */
@@ -31,7 +31,7 @@ layout: default
 <div id="toc" class="floating-div" onclick="toggleSize(this)"></div>
 <script>
 	function toggleSize(div) {
-		if (div.style.width === '200px' && div.style.height === '800px') {
+		if (div.style.width === '200px' && div.style.height === '550px') {
 			div.style.width = '20px';
 			div.style.height = '20px';
 			div.style.bottom = '650px';
@@ -49,7 +49,7 @@ layout: default
 			titleElement.innerHTML = '目录';*/
 		} else {
 			div.style.width = '200px';
-			div.style.height = '800px';
+			div.style.height = '550px';
 			div.style.bottom = '150px';
 			/*
 			var lists = document.getElementsByClassName('floating-ul');
