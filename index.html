@@ -61,7 +61,7 @@ layout: default
 		{% else %}
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if paginator.total_pages > 1 %}
+			{% if paginator.previous_page %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 			{% endif %}
 			{% if year != nyear %}
