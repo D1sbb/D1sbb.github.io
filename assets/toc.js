@@ -11,7 +11,7 @@
       showSpeed: '0', // set to 0 to deactivate effect 原来slow
       classes: { list: 'floating-ul',
                  item: 'floating-li',
-                 link: ''
+                 link: 'floating-a'
                }
     },
     settings = $.extend(defaults, options);
