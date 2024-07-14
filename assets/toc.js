@@ -7,7 +7,7 @@
       minimumHeaders: 3,//当找到至少 3 个标题时，会显示目录
       headers: 'h1, h2, h3',//, h4, h5, h6
       listType: 'ul', // values: [ol|ul]
-      showEffect: 'show', // values: [show|slideDown|fadeIn|none]原来show
+      showEffect: 'none', // values: [show|slideDown|fadeIn|none]原来show
       showSpeed: '0', // set to 0 to deactivate effect 原来slow
       classes: { list: '',
                  item: '',
