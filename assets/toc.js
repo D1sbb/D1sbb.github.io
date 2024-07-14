@@ -9,7 +9,7 @@
       listType: 'ul', // values: [ol|ul]
       showEffect: 'none', // values: [show|slideDown|fadeIn|none]原来show
       showSpeed: '0', // set to 0 to deactivate effect 原来slow
-      classes: { list: '',
+      classes: { list: 'floating-ul',
                  item: '',
                  link: ''
                }
@@ -57,7 +57,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = settings.title + " <" +settings.listType + " class=floating-ul\"" + settings.classes.list +"\">";
+      html = settings.title + " <" + settings.listType + " class=\"" + settings.classes.list +"\">";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
@@ -79,7 +79,7 @@
       }
       else if (this_level > level) { // lower level than before; expand the previous to contain a ol
         for(i = this_level; i > level; i--) {
-          html += "<" + settings.listType + " class=floating-ul\"" + settings.classes.list +"\">" +
+          html += "<" + settings.listType + " class=\"" + settings.classes.list +"\">" +
                   "<li class=\"" + settings.classes.item + "\">"
         }
         html += createLink(header);
