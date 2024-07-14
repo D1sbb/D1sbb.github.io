@@ -61,9 +61,15 @@ layout: default
 		{% else %}
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if (year != nyear) or (forloop.index == 1)%}<!-- 加or 首部必是年份-->
+			{% if year != nyear %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
+			{% else %}
+			<!-- 加or首部必是年份-->
+				{% if forloop.index == 1 %}
+				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
+				{% endif %}
 			{% endif %}
+			<!-- end 加or首部必是年份-->
 		{% endunless %}
 		<ul>
 			<li>
