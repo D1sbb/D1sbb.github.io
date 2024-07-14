@@ -15,6 +15,8 @@ layout: default
 .floating-ul{/* ul缩进 在toc.js里 */
 	margin: 0px 0;
 	padding-left: 10px;
+}
+.floating-ul.hidden {
 	display: none;
 }
 </style>
@@ -26,6 +28,7 @@ layout: default
 			div.style.height = '20px';
 			div.style.bottom = '650px';
 			var list = document.getElementsByClassName('floating-ul');
+			list.classList.toggle('hidden');
 			list.style.display = 'none';
 			/* 修改 h3 标题内容
 			var titleElement = document.getElementById('myCatalogue');
@@ -35,6 +38,7 @@ layout: default
 			div.style.height = '600px';
 			div.style.bottom = '150px';
 			var list = document.getElementsByClassName('floating-ul');
+			list.classList.toggle('hidden');
 			list.style.display = 'block';
 			/* 还原 h3 标题内容
 			var titleElement = document.getElementById('myCatalogue');
