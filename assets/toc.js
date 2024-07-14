@@ -3,11 +3,11 @@
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,//true false
-      //删除了此代码title: '<i>Jump to...</i>',
+      title: '<h3>目录</h3>',
       minimumHeaders: 3,//当找到至少 3 个标题时，会显示目录
       headers: 'h1, h2, h3',//, h4, h5, h6
       listType: 'ul', // values: [ol|ul]
-      showEffect: 'none', // values: [show|slideDown|fadeIn|none]
+      showEffect: 'show', // values: [show|slideDown|fadeIn|none]原来show
       showSpeed: '0', // set to 0 to deactivate effect 原来slow
       classes: { list: '',
                  item: '',
@@ -57,7 +57,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = " <" +settings.listType + " class=\"" + settings.classes.list +"\">";//删除了此代码 html = settings.title +
+      html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\">";
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
