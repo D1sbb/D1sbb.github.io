@@ -97,3 +97,39 @@
     render[settings.showEffect]();
   };
 })(jQuery);
+
+function toggleSize(div) {
+  if (div.style.width === '200px' && div.style.height === '550px') {
+    div.style.width = '20px';
+    div.style.height = '20px';
+    div.style.bottom = '650px';
+    /*
+    var lists = document.getElementsByClassName('floating-ul');
+    var listsli = document.getElementsByClassName('floating-li');
+    for (var i = 0; i < lists.length; i++) {
+        lists[i].style.display = 'none';
+    }
+    for (var ili = 0; ili < listsli.length; ili++) {
+        listsli[ili].style.display = 'none';
+    }*/
+    /* 修改 h3 标题内容
+    var titleElement = document.getElementById('myCatalogue');
+    titleElement.innerHTML = '目录';*/
+  } else {
+    div.style.width = '200px';
+    div.style.height = '550px';
+    div.style.bottom = '100px';
+    /*
+    var lists = document.getElementsByClassName('floating-ul');
+    var listsli = document.getElementsByClassName('floating-li');
+    for (var i = 0; i < lists.length; i++) {
+        lists[i].style.display = 'block';
+    }
+    for (var ili = 0; ili < listsli.length; ili++) {
+        listsli[ili].style.display = 'block';
+    }*/
+    /* 还原 h3 标题内容
+    var titleElement = document.getElementById('myCatalogue');
+    titleElement.innerHTML = '目录';*/
+  }
+}
