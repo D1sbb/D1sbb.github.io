@@ -3,7 +3,7 @@
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,//true false
-      title: '<i id="myCatalogue">目录</i><a href="#" id="back-top"><i>^</i></a>',
+      title: '<i id="myCatalogue">目录</i>',
       minimumHeaders: 3,//当找到至少 3 个标题时，会显示目录
       headers: 'h1, h2',//, h3, h4, h5, h6
       listType: 'ul', // values: [ol|ul]
