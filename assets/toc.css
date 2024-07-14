@@ -24,4 +24,5 @@
 #back-top{
     right: 0;
     font-style: normal;
+    position: fixed;
 }
