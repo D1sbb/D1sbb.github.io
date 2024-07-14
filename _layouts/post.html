@@ -15,6 +15,7 @@ layout: default
 .floating-ul{/* ul缩进 在toc.js里 */
 	margin: 0px 0;
 	padding-left: 20px;
+	list-style-type: none;
 }
 </style>
 <div id="toc" class="floating-div" onclick="toggleSize(this)"></div>
@@ -24,6 +25,7 @@ layout: default
 			div.style.width = '20px';
 			div.style.height = '20px';
 			div.style.bottom = '650px';
+			/*
 			var lists = document.getElementsByClassName('floating-ul');
 			var listsli = document.getElementsByClassName('floating-li');
 			for (var i = 0; i < lists.length; i++) {
@@ -31,7 +33,7 @@ layout: default
 			}
 			for (var ili = 0; ili < listsli.length; ili++) {
 				listsli[ili].style.display = 'none';
-			}
+			}*/
 			/* 修改 h3 标题内容
 			var titleElement = document.getElementById('myCatalogue');
 			titleElement.innerHTML = '目录';*/
@@ -39,6 +41,7 @@ layout: default
 			div.style.width = '200px';
 			div.style.height = '550px';
 			div.style.bottom = '150px';
+			/*
 			var lists = document.getElementsByClassName('floating-ul');
 			var listsli = document.getElementsByClassName('floating-li');
 			for (var i = 0; i < lists.length; i++) {
@@ -46,7 +49,7 @@ layout: default
 			}
 			for (var ili = 0; ili < listsli.length; ili++) {
 				listsli[ili].style.display = 'block';
-			}
+			}*/
 			/* 还原 h3 标题内容
 			var titleElement = document.getElementById('myCatalogue');
 			titleElement.innerHTML = '目录';*/
