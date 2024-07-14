@@ -2,15 +2,15 @@
 (function($){
   $.fn.toc = function(options) {
     var defaults = {
-      noBackToTopLinks: true,//true false
+      noBackToTopLinks: false,//true false
       //删除了此代码title: '<i>Jump to...</i>',
-      minimumHeaders: 3,
+      minimumHeaders: 3,//当找到至少 3 个标题时，会显示目录
       headers: 'h1, h2, h3',//, h4, h5, h6
       listType: 'ul', // values: [ol|ul]
-      showEffect: 'slideDown', // values: [show|slideDown|fadeIn|none]
+      showEffect: 'show', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'slow', // set to 0 to deactivate effect
-      classes: { list: '',
-                 item: '',
+      classes: { list: 'lorem ipsum',
+                 item: 'dolor sit amet',
                  link: ''
                }
     },
