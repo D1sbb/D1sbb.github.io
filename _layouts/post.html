@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <article style="flex: 3;">
 
 	<div class="center">
@@ -12,13 +13,13 @@ layout: default
 	{% if page.music-id %}
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&auto=1&id={{ page.music-id }}&height=66"></iframe>
 	{% endif %}
+
 		{{ content }}
 		
 	<div>
 			{% include comment.html %}<!-- Comments -->
 	</div>
-</article>
-<div id="toc" style="flex: 1;"></div><!--添加目录与ScrollSpy效果 -->
+</article><div id="toc" style="flex: 3;"></div><!--添加目录与ScrollSpy效果 -->
 
 <div class="page-navigation code">
 	{% if page.next.url %}
