@@ -63,13 +63,11 @@ layout: default
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
 			{% if year != nyear %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
-			{% else %}
-			<!-- 加or首部必是年份-->
-				{% if forloop.index == 1 %}
+			<!-- 加elseif首部必是年份-->
+			{% elseif forloop.index == 1 %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
-				{% endif %}
+			<!-- end 加elseif首部必是年份-->
 			{% endif %}
-			<!-- end 加or首部必是年份-->
 		{% endunless %}
 		<ul>
 			<li>
