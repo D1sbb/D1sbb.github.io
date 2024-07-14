@@ -5,7 +5,7 @@
       noBackToTopLinks: false,
       //title: '<i>Jump to...</i>',
       minimumHeaders: 3,
-      headers: 'h1, h2',//, h3, h4, h5, h6
+      headers: 'h1, h2, h3',//, h4, h5, h6
       listType: 'ul', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'slow', // set to 0 to deactivate effect
@@ -57,7 +57,7 @@
 
     var level = get_level(headers[0]),
       this_level,
-      html = settings.title + " <" +settings.listType + " class=\"" + settings.classes.list +"\">";
+      html = " <" +settings.listType + " class=\"" + settings.classes.list +"\">";//删除了此代码 html = settings.title +
     headers.on('click', function() {
       if (!settings.noBackToTopLinks) {
         window.location.hash = this.id;
