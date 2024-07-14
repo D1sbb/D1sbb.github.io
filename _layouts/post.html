@@ -6,10 +6,10 @@ layout: default
 .floating-div {/* 悬浮目录 */
 	position: fixed;
 	/* top: 0; */
-	/* bottom: 150px;*/
+	bottom: 150px;
 	right: 0;
 	width: 200px;
-	height: 650px;
+	height: 550px;
 	background-color: #FFFFFF;
 }
 .floating-ul, .floating-li{/* ul缩进 在toc.js里 */
@@ -22,22 +22,20 @@ layout: default
 	text-decoration: none;
 }
 #myCatalogue{
-	font-family: Arial, sans-serif;
 	font-size: 20px;
 	font-weight: bold;
+	font-style: normal;
 }
 
 </style>
 <div id="toc" class="floating-div" onclick="toggleSize(this)"></div>
 <script>
 	function toggleSize(div) {
-		if (div.style.width === '200px' && div.style.height === '650px') {
+		if (div.style.width === '200px' && div.style.height === '550px') {
 			div.style.width = '24px';
 			div.style.height = '20px';
-
-			/*
 			div.style.bottom = '650px';
-
+			/*
 			var lists = document.getElementsByClassName('floating-ul');
 			var listsli = document.getElementsByClassName('floating-li');
 			for (var i = 0; i < lists.length; i++) {
@@ -51,10 +49,9 @@ layout: default
 			titleElement.innerHTML = '目录';*/
 		} else {
 			div.style.width = '200px';
-			div.style.height = '650px';
-			/*
+			div.style.height = '550px';
 			div.style.bottom = '150px';
-
+			/*
 			var lists = document.getElementsByClassName('floating-ul');
 			var listsli = document.getElementsByClassName('floating-li');
 			for (var i = 0; i < lists.length; i++) {
