@@ -1,8 +1,6 @@
 ---
 layout: default
 ---
-<!--添加目录与ScrollSpy效果 -->
-<div id="toc"></div>
 
 <article>
 
@@ -15,6 +13,8 @@ layout: default
 	{% if page.music-id %}
 		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&auto=1&id={{ page.music-id }}&height=66"></iframe>
 	{% endif %}
+		<!--添加目录与ScrollSpy效果 -->
+		<div id="toc"></div>
 		{{ content }}
 		
 	<div>
