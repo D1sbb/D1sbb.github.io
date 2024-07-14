@@ -56,11 +56,8 @@ layout: default
 <!-- end这里加搜索功能-->
 <section class="section_index">
 	{% for post in paginator.posts %}
-		{% assign is_first_post_of_page = forloop.index % 10 == 1 %}
-	<script>
-		console.log('{{forloop.index}}');
-		console.log('{{forloop.index % 10 == 1}}');
-	</script>
+		{% assign is_first_post_of_page = forloop.index == 1 %}
+
 		{% unless post.next or is_first_post_of_page %}
 			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 		{% else %}
