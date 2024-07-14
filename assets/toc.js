@@ -3,7 +3,7 @@
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,//true false
-      title: '<a href="#" ><i id="back-top" class="fa fa-arrow-up fa-3x" aria-hidden="true"></i></a><br><br><i class="fa fa-bars fa-3x" aria-hidden="true"></i>',
+      title: '<a href="#" ><i id="back-top" class="fa fa-arrow-up fa-2x" aria-hidden="true"></i></a><br><br><i class="fa fa-bars fa-lg" aria-hidden="true"></i>',
       minimumHeaders: 3,//当找到至少 3 个标题时，会显示目录
       headers: 'h1, h2',//, h3, h4, h5, h6
       listType: 'ul', // values: [ol|ul]
