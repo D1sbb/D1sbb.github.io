@@ -56,21 +56,12 @@ layout: default
 <!-- end这里加搜索功能-->
 <section class="section_index">
 	{% for post in paginator.posts %}
-	<script>
-		console.log('{{forloop.index == 1}}');
-	</script>
-
 		{% unless post.next %}
 			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 		{% else %}
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-
-			{% if forloop.index == 1 %}
-			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
-			{% endif %}
-
-			{% if year != nyear %}
+			{% if (year != nyear) or (forloop.index == 1)%}<!-- 加or 首部必是年份-->
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 			{% endif %}
 		{% endunless %}
