@@ -8,12 +8,6 @@ layout: default
 		width: 500px;
 		margin: 0 auto;
 	}
-	input {
-
-	}
-	i {/* i 之前是 button */
-
-	}
 	input, button {
 		border: none;
 		outline: none;
@@ -38,20 +32,19 @@ layout: default
 		z-index: 1;
 		border-bottom: 1px solid #757575;
 	}
-	.search-container i{/* i 之前是 button */
+	.search-container button{
 		height: 32px;
-		width: 42px;
+		width: 30px;
 		cursor: pointer;
 		position: absolute;
 
 		top: 0;
 		right: 0;
 		background: #FFFFFF;
-		/* width: 30px; */
 	}
-	/*.search-container button:before {
+	.search-container button:before {
 		content: url(/assets/search.svg);
-	}*/
+	}
 	.search-container li{
 		display:block;
 	}
@@ -59,7 +52,7 @@ layout: default
 <article>
 	<div class="search-container">
 		<input type="text" id="search-input" placeholder="search...">
-		<!-- <button type="submit"></button>--><i class="fa fa-search fa-lg" aria-hidden="true" /></i>
+		<button type="submit"></button>
 		<ul id="results-container"></ul>
 	</div>
 </article>
