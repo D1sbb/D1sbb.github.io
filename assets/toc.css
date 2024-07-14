@@ -22,7 +22,7 @@
     font-style: normal;
 }
 #back-top{
-    right: 0;
+    /* right: 0;
+    position: fixed; */
     font-style: normal;
-    position: fixed;
 }
