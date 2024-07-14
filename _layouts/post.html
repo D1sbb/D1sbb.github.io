@@ -1,9 +1,8 @@
 ---
 layout: default
 ---
-<div>
-	{% include ScrollSpy.html %}<!-- ScrollSpy -->
-</div>
+<div id="toc"></div><!--添加目录与ScrollSpy效果 -->
+
 <article>
 
 	<div class="center">
@@ -60,3 +59,11 @@ https://cdn.staticfile.net/jquery/3.2.1/jquery.min.js
 	});
 </script>
 <!--end图片放大功能 -->
+
+<!--添加目录与ScrollSpy效果 -->
+<script src="/assets/toc.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#toc').toc();
+	});
+</script>
