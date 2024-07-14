@@ -3,8 +3,30 @@ layout: default
 ---
 
 <!--添加目录与ScrollSpy效果 <div id="toc"></div>-->
+<style>
+.hung-panel {
+	height: 100%;
+	width: 80%;
+	float: right;
+}
+#toc {
+	width: 20%;
+}
+.toc {
+	width: 20%;
+	position: fixed;
+	text-align: right;
+}
+.toc a:hover {
+	font-weight: 700;
+	color:#111112;
+	text-decoration: none;
+}
+.toc a {
+	color:#909092;
+}
+</style>
 
-<body  data-spy="scroll" data-target="#toc" data-offset="20">
 <div class="main-left">
 	<div class="hung-panel">
 		<nav id="toc" class="affix" data-spy="affix" data-toggle="toc">
@@ -44,7 +66,6 @@ layout: default
     <a class="prev" href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" title="PREV: {{page.previous.title}}">&gt;&gt;</a>
   {% endif %}
 </div>
-</body>
 
 <!--图片放大功能 -->
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
