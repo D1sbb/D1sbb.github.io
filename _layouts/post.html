@@ -15,8 +15,6 @@ layout: default
 .floating-ul{/* ul缩进 在toc.js里 */
 	margin: 0px 0;
 	padding-left: 10px;
-}
-.floating-ul.hidden {
 	display: none;
 }
 </style>
@@ -27,9 +25,10 @@ layout: default
 			div.style.width = '20px';
 			div.style.height = '20px';
 			div.style.bottom = '650px';
-			var list = document.getElementsByClassName('floating-ul');
-			list.classList.toggle('hidden');
-			list.style.display = 'none';
+			var lists = document.getElementsByClassName('floating-ul');
+			for (var i = 0; i < lists.length; i++) {
+				lists[i].style.display = 'none';
+			}
 			/* 修改 h3 标题内容
 			var titleElement = document.getElementById('myCatalogue');
 			titleElement.innerHTML = '目录';*/
@@ -37,9 +36,10 @@ layout: default
 			div.style.width = '200px';
 			div.style.height = '600px';
 			div.style.bottom = '150px';
-			var list = document.getElementsByClassName('floating-ul');
-			list.classList.toggle('hidden');
-			list.style.display = 'block';
+			var lists = document.getElementsByClassName('floating-ul');
+			for (var i = 0; i < lists.length; i++) {
+				lists[i].style.display = 'block';
+			}
 			/* 还原 h3 标题内容
 			var titleElement = document.getElementById('myCatalogue');
 			titleElement.innerHTML = '目录';*/
