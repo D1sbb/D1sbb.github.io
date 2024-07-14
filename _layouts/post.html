@@ -3,7 +3,7 @@ layout: default
 ---
 <!--添加目录与ScrollSpy效果 -->
 <style>
-.floating-div {
+.floating-div {/* 悬浮目录 */
 	position: fixed;
 	/* top: 0; */
 	bottom: 150px;
@@ -11,6 +11,10 @@ layout: default
 	width: 200px;
 	height: 500px;
 	/* background-color: #FFFFFF;*/
+}
+.floating-ul{/* ul缩进 在toc.js里 */
+	margin: 0px 0;
+	padding-left: 10px;
 }
 </style>
 <div id="toc" class="floating-div" onclick="toggleSize(this)"></div>
