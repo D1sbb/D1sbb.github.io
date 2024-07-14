@@ -1,14 +1,14 @@
 ---
 layout: default
 ---
-<div id="toc"></div><!--添加目录与ScrollSpy效果 -->
-
 <article>
 
 	<div class="center">
 		<h1 class="title">{{ page.title }}</h1>
 		<time class="code">{{ page.date | date: '%B %-d, %Y' }}</time>
 	</div>
+	<!--添加目录与ScrollSpy效果 -->
+	<div id="toc"></div>
 
 	<div class="divider"></div>
 	{% if page.music-id %}
@@ -67,3 +67,4 @@ https://cdn.staticfile.net/jquery/3.2.1/jquery.min.js
 		$('#toc').toc();
 	});
 </script>
+<!--end添加目录与ScrollSpy效果 -->
