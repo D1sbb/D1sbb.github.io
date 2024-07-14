@@ -56,15 +56,14 @@ layout: default
 <!-- end这里加搜索功能-->
 <section class="section_index">
 	{% for post in paginator.posts %}
+		{% assign is_first_post_of_page = forloop.index == 1 or forloop.first %}
 		{% unless post.next %}
 			<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 		{% else %}
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if paginator.previous_page %}
-				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
-			{% endif %}
-			{% if year != nyear %}
+
+			{% if year != nyear or (is_first_post_of_page and year == nyear) %}
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 			{% endif %}
 		{% endunless %}
