@@ -10,7 +10,7 @@
       showEffect: 'none', // values: [show|slideDown|fadeIn|none]原来show
       showSpeed: '0', // set to 0 to deactivate effect 原来slow
       classes: { list: 'floating-ul',
-                 item: '',
+                 item: 'floating-li',
                  link: ''
                }
     },
