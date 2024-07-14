@@ -1,9 +1,19 @@
 ---
 layout: default
 ---
+<style>
+	.floating-div {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100px;
+		height: 100px;
+		background-color: red;
+	}
+</style>
 <div style="display: flex;">
 
-<article style="flex: 5;">
+<article style="flex: 10;">
 
 	<div class="center">
 		<h1 class="title">{{ page.title }}</h1>
@@ -20,7 +30,7 @@ layout: default
 	<div>
 			{% include comment.html %}<!-- Comments -->
 	</div>
-</article><div id="toc" style="flex: 1;"></div><!--添加目录与ScrollSpy效果 -->
+</article><div id="toc" style="flex: 1;" class="floating-div"></div><!--添加目录与ScrollSpy效果 -->
 </div>
 
 <div class="page-navigation code">
