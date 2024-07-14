@@ -13,7 +13,18 @@ layout: default
 	/* background-color: #FFFFFF;*/
 }
 </style>
-<div id="toc" class="floating-div"></div>
+<div id="toc" class="floating-div" onclick="toggleSize(this)"></div>
+<script>
+	function toggleSize(div) {
+		if (div.style.width === '200px' && div.style.height === '500px') {
+			div.style.width = '50px';
+			div.style.height = '50px';
+		} else {
+			div.style.width = '200px';
+			div.style.height = '500px';
+		}
+	}
+</script>
 <!--end添加目录与ScrollSpy效果 -->
 
 <article>
