@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<!-- 这里加搜索功能-->
+<!-- 搜索功能-->
 <style>
 	.search-container {
 		position: relative;
-		width: 500px;
+		max-width: 500px;
 		margin: 0 auto;
 	}
 	input, button {
@@ -53,7 +53,7 @@ layout: default
 		<ul id="results-container"></ul>
 	</div>
 </article>
-<!-- end这里加搜索功能-->
+<!-- end搜索功能-->
 <section class="section_index">
 	{% for post in paginator.posts %}
 		{% unless post.next %}
@@ -61,7 +61,7 @@ layout: default
 		{% else %}
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-			{% if year != nyear or forloop.first %}<!-- 加or首部必是年份-->
+			{% if year != nyear or forloop.first %}<!-- forloop.first页面首部必是年份-->
 				<h3 class="code">{{ post.date | date: '%Y' }}</h3>
 			{% endif %}
 		{% endunless %}
@@ -92,7 +92,7 @@ layout: default
   	{% endif %}
 </section>
 
-<!-- 这里加搜索功能-->
+<!-- 搜索功能-->
 <script src="/assets/simple-jekyll-search.min.js"></script>
 <script>
 	window.simpleJekyllSearch = new SimpleJekyllSearch({
@@ -122,4 +122,4 @@ layout: default
 		});
 	});
 </script>
-<!-- end这里加搜索功能-->
+<!-- end搜索功能-->
